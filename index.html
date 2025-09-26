@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The Village Food — Fresh Sweets & Dairy</title>
+  <meta name="description" content="The Village Food — Fresh sweets, milk & dairy products made the old-fashioned way. Pure, natural, straight from the village." />
+  <link rel="icon" href="favicon.ico" />
+  <style>
+    :root{
+      --bg:#F6EBD9; --accent:#5A6B38; --dark:#3E2A19; --muted:#7b6a5a;
+      --card:#fff;
+      font-family: 'Segoe UI', Roboto, system-ui, -apple-system, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,var(--bg),#f1e6d7);
+      color:var(--dark);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+    .container{max-width:1000px;margin:48px auto;padding:24px}
+    header{display:flex;align-items:center;gap:18px}
+    .logo{width:88px;height:88px;border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,0.08)}
+    .logo img{max-width:78%;max-height:78%}
+    .brand{line-height:1}
+    .brand h1{margin:0;font-size:20px;letter-spacing:1px;color:var(--dark)}
+    .brand p{margin:4px 0 0;color:var(--muted);font-size:13px}
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;margin-top:26px;align-items:center}
+    .hero-left{padding:18px}
+    .kicker{display:inline-block;background:#fff;padding:6px 10px;border-radius:999px;font-weight:600;color:var(--accent);font-size:13px;box-shadow:0 2px 6px rgba(0,0,0,0.04)}
+    h2{font-size:34px;margin:18px 0 8px;color:var(--dark)}
+    p.lead{margin:0 0 18px;color:var(--muted);font-size:16px;line-height:1.5}
+    .features{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
+    .fcard{background:var(--card);padding:12px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);min-width:150px;flex:1}
+    .fcard h4{margin:0;font-size:14px;color:var(--accent)}
+    .fcard p{margin:6px 0 0;font-size:13px;color:var(--muted)}
+    .hero-right{background:linear-gradient(180deg,#fff,#fff);padding:18px;border-radius:12px;box-shadow:0 12px 30px rgba(0,0,0,0.06)}
+    form label{display:block;font-size:13px;margin-bottom:6px;color:var(--muted)}
+    input,textarea{width:100%;padding:10px;border:1px solid #eee;border-radius:8px;font-size:14px;margin-bottom:10px}
+    .btn{display:inline-block;background:var(--accent);color:#fff;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:700;border:none;cursor:pointer}
+    footer{margin-top:32px;padding-top:18px;border-top:1px solid rgba(0,0,0,0.04);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+    .social{display:flex;gap:8px}
+    .pill{background:#fff;padding:6px 10px;border-radius:999px;border:1px solid rgba(0,0,0,0.03);font-size:13px}
+    .trusts{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+    .badge{background:#fff;padding:8px 10px;border-radius:8px;border:1px solid rgba(0,0,0,0.04);font-size:13px}
+    @media(max-width:880px){
+      .hero{grid-template-columns:1fr; }
+      .hero-right{order:2}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <!-- placeholder logo -->
+        <img src="logo.svg" alt="The Village Food logo">
+      </div>
+      <div class="brand">
+        <h1>The Village Food</h1>
+        <p>Fresh sweets • Pure milk • Village-made goodness</p>
+      </div>
+    </header>
+
+    <section class="hero" aria-labelledby="main-title">
+      <div class="hero-left">
+        <span class="kicker">Now delivering near you</span>
+        <h2 id="main-title">Real village milk & sweets — made fresh daily</h2>
+        <p class="lead">We craft sweets and dairy with traditional methods, no preservatives, direct from our farms to your home. Pure, trusted, and delicious — the way it should be.</p>
+
+        <div class="features">
+          <div class="fcard">
+            <h4>Farm-fresh milk</h4>
+            <p>Collected daily from local cows, A2 option available.</p>
+          </div>
+          <div class="fcard">
+            <h4>Traditional sweets</h4>
+            <p>Ghee-based sweets, laddoo, peda & more — made same day.</p>
+          </div>
+          <div class="fcard">
+            <h4>Hygiene first</h4>
+            <p>Small-batch, sanitized kitchens; tested and packed fresh.</p>
+          </div>
+        </div>
+
+        <div class="trusts" aria-hidden="true">
+          <div class="badge">Daily fresh — No preservatives</div>
+          <div class="badge">Farm-to-home</div>
+          <div class="badge">Small-batch hygiene</div>
+        </div>
+      </div>
+
+      <aside class="hero-right" aria-label="Contact & subscribe">
+        <h3 style="margin-top:0">Get notified / Order enquiries</h3>
+        <form id="contactForm" action="https://formspree.io/f/your-form-id" method="POST">
+          <!-- Replace the action with your Formspree endpoint (free) -->
+          <label for="name">Full name</label>
+          <input id="name" name="name" required placeholder="Your name">
+
+          <label for="email">Email</label>
+          <input id="email" type="email" name="_replyto" required placeholder="you@example.com">
+
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" placeholder="+91 98xxxx">
+
+          <label for="msg">Message (for bulk orders / wholesale)</label>
+          <textarea id="msg" name="message" rows="3" placeholder="Tell us what you need"></textarea>
+
+          <button class="btn" type="submit">Send enquiry</button>
+          <p style="font-size:12px;margin-top:10px;color:var(--muted)">We reply within 24 hours. We never share your info.</p>
+        </form>
+
+        <div style="margin-top:16px">
+          <strong>Quick contact</strong>
+          <div style="margin-top:8px">
+            <div class="pill">Phone: +91 9XXXXXXXXX</div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      <div>© <strong>The Village Food</strong> — Fresh sweets & dairy</div>
+      <div class="social">
+        <a class="pill" href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+        <a class="pill" href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
+        <a class="pill" href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      setTimeout(()=>alert('Thank you — we will contact you soon!'), 800);
+    });
+  </script>
+</body>
+</html>
